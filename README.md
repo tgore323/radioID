@@ -1,4 +1,4 @@
-<b><h1> radioID </h1><br>
+<b><h1> radioID </h1></b>
 <h3>Tim Gore, KE6QBV</h3> 
 <hr>
 
