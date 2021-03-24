@@ -12,6 +12,6 @@ try:
     data = json.loads(url.text)
     print('The following ID(s) are registered to '+callsign+' : ')
     for record in data['results']:
-        print(record['id'], record['remarks'])
+        print(record['fname'], record['surname'], record['callsign'], record['id'], record['remarks'])
 except:
     print('Sorry, no results for '+callsign)
