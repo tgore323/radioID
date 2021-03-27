@@ -1,11 +1,14 @@
 import requests
 import json
-
-
-# Display menu
+print(' ')
+print(50 * '=')
+print('RadioID v2 by Tim Gore, KE6QBV')
+print(50 * '=')
 
 def get_menu_choice():
+    ''' Gets the users choice from the below menu '''
     def print_menu():
+        ''' Prints the actual menu '''
         print(' ')
         print('1. Search for user by callsign')
         print('2. Search for user by radio ID')
@@ -22,51 +25,53 @@ def get_menu_choice():
 
         if choice == '1':
             int_choice = 1
-            loop = False
-            callsign = input('Please enter the desired callsign: ')
+            #loop = False
+            callsign = input('\nPlease enter the desired callsign: ')
             callsign = callsign.upper()
             try:
                 url = requests.get('https://database.radioid.net/api/dmr/user/?callsign='+callsign)
-                # turn JSON into text, so Python can in tern use it as dictionary
                 data = json.loads(url.text)
-                print('The following ID(s) are registered to '+callsign+' : ')
+                print('\nThe following ID(s) are registered to '+callsign+' :')
                 for record in data['results']:
                     print(record['fname'], record['surname'], record['callsign'], record['id'], record['remarks'])
+                input('\nPress ENTER to return to the main menu.')
             except:
-                print('Sorry, no results for '+callsign)
+                print('\nSorry, no results for '+callsign)
+                input('\nPress ENTER to return to the main menu.')
         elif choice == '2':
             int_choice = 2
-            loop = False
-            radioid = input('Please enter the desired ID: ')
+            #loop = False
+            radioid = input('\nPlease enter the desired ID: ')
             try:
                 url = requests.get('https://database.radioid.net/api/dmr/user/?id='+radioid)
-                # turn JSON into text, so Python can in tern use it as dictionary
                 data = json.loads(url.text)
-                print('The following user is registered to ID '+radioid+' : ')
+                print('\nThe following user is registered to ID '+radioid+' : \n')
                 for record in data['results']:
                     print(record['fname'], record['surname'], record['callsign'], record['id'], record['remarks'])
+                input('\nPress ENTER to return to the main menu.')
             except:
-                print('Sorry, no results for '+radioid)
+                print('\nSorry, no results for '+radioid+'')
+                input('\nPress ENTER to return to the main menu.')
         elif choice == '3':
             int_choice = 3
-            loop = False
-            surname = input('Please enter the desired user\'s surname: ')
+            #loop = False
+            surname = input('\nPlease enter the desired user\'s surname: ')
             try:
                 url = requests.get('https://database.radioid.net/api/dmr/user/?surname='+surname)
-                # turn JSON into text, so Python can in tern use it as dictionary
                 data = json.loads(url.text)
-                print('The following surname is registered to '+surname+' : ')
+                print('\nThe following surname is registered to '+surname+' : ')
                 for record in data['results']:
                     print(record['fname'], record['surname'], record['callsign'], record['id'], record['remarks'])
+                input('\nPress ENTER to return to the main menu.')
             except:
-                print('Sorry, no results for '+surname)
+                print('\nSorry, no results for '+surname)
+                input('\nPress ENTER to return to the main menu.')
         elif choice == '4':
             int_choice = -1
-            print('Exiting program... ')
+            print('\nExiting program...\n')
             loop = False
         else:
-            input('Invalid menu selection. Enter any key to try again... ')
-    return [int_choice, choice]
+            input('\nInvalid menu selection. Press ENTER to go back... ')
+    #return #[int_choice, choice]
 
 print(get_menu_choice())
-
