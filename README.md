@@ -1,9 +1,7 @@
 # radioID
 ## Tim Gore, KE6QBV
 
-*radioID* is a small program to display assigned radio ID numbers for amateur radio digital radio networks.
-
-As amateur radio users have built out world-wide digital radio networks, the need arose to have a centralized registrar of radio ID numbers. This allows folks >
+*radioID* is a small program to lookup and display assigned radio ID numbers for amateur radio digital radio networks. You can search by callsign, radioid or surname. 
 
 This program uses the RadioID Database, which is located at [radioid.net](https://www.radioid.net/).
 
