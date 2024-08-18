@@ -1,7 +1,7 @@
-#radioID
-##Tim Gore, KE6QBV
+# radioID
+## Tim Gore, KE6QBV
 
-*radioID* is a small program to display assigned radio ID numbers for amateur radio digital radio networks.
+* radioID * is a small program to display assigned radio ID numbers for amateur radio digital radio networks.
 
 As amateur radio users have built out world-wide digital radio networks, the need arose to have a centralized registrar of radio ID numbers. This allows folks >
 
