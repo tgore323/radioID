@@ -1,12 +1,12 @@
-<b><h1> radioID </h1></b>
-<h3>Tim Gore, KE6QBV</h3> 
-<hr>
+#radioID
+##Tim Gore, KE6QBV
 
-<i>Small program to display assigned radio ID numbers for amateur radio digital radio networks. </i>
+*radioID* is a small program to display assigned radio ID numbers for amateur radio digital radio networks.
 
-As amateur radio users have built out world-wide digital radio networks, the need arose to have a centralized registrar of radio ID numbers. This allows folks to create contact lists (i.e. associate a radio ID with a name and callsign). 
+As amateur radio users have built out world-wide digital radio networks, the need arose to have a centralized registrar of radio ID numbers. This allows folks >
 
+This program uses the RadioID Database, which is located at [radioid.net](https://www.radioid.net/).
 
-This program uses the RadioID Database, which is located at https://www.radioid.net/
+They have a very easy to use API, which in turn makes this little program work.
 
-They have a very easy to use API, which in turn makes this little program work. 
+If you have any questions, please don't hesitate to reach out.
